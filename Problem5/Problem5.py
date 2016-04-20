@@ -5,15 +5,15 @@
 # of the numbers from 1 to 20?
 
 
-def gcd(a, b):
-    return b and gcd(b, a % b) or a
+def lowest_common_multiple(x, y):
+    return x * y / greatest_common_denominator(x, y)
 
 
-def lcm(a, b):
-    return a * b / gcd(a, b)
+def greatest_common_denominator(a, b):
+    return b and greatest_common_denominator(b, a % b) or a
 
 n = 1
 for i in range(1, 21):
-    n = lcm(n, i)
+    n = lowest_common_multiple(n, i)
 
 print(n)
