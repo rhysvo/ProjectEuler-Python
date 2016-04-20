@@ -11,12 +11,12 @@ def is_palindromic(number):
     else:
         return False
 
+
 num = 0
-for a in range(999,100,-1):
+for a in range(999, 100, -1):
     for b in range(a, 100, -1):
         x = a * b
         if x > num:
             if is_palindromic(a * b):
                 num = x
 print(num)
-
